@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+.hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Blurred + zooming background image */
+.bg-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  transform: scale(1.05); /* initial size to hide blur edges */
+  z-index: -1;
+  animation: bgZoom 15s ease-in-out forwards; /* zoom effect */
+}
+
+/* Dark overlay */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content container */
+.content {
+  color: white;
+  text-align: center;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.typed {
+  font-weight: 600;
+  font-size: 190%;
+  font-style: italic;
+}
+
+p {
+    font-size: 20px;
+  font-family: "Libertinus Serif", serif;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+.auth-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn {
+  background: transparent !important;
+  border: 2px solid white !important;
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  transform: scale(1.05);
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+/* Base fade-in */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in forwards;
+}
+
+/* Slide-up + fade-in */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Background zoom animation */
+@keyframes bgZoom {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1.15); /* slow zoom */
+  }
+}
+
+/* Delay variations */
+.delay-0 {
+  animation-delay: 0.2s;
+}
+
+.delay-1 {
+  animation-delay: 1.5s;
+}
+
+.delay-2 {
+  animation-delay: 2.5s;
+}
