@@ -1,5 +1,5 @@
-import React from 'react'
-import './Auth.css'
+import React from 'react';
+import './Auth.css';
 import { ReactTyped } from "react-typed";
 import base from '../assets/baseone.jpg';
 import { Link } from 'react-router-dom';
@@ -32,7 +32,7 @@ const Homeauth = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Homeauth
+export default Homeauth;
